@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* width */
+::-webkit-scrollbar {
+  /* width: 3px; */
+  border-radius: 100%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #202020;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(220, 15%, 20%);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(220, 10%, 28%);
+}
+
+.streaky-glow {
+  position: relative;
+  font-family: inherit;
+  color: transparent;
+  background: linear-gradient(90deg, #fff, rgba(255, 200, 0, 0.679), #0ff, #fff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: glow 4s infinite alternate, streaky-move 4s linear infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 
+                 0 0 10px rgba(255, 255, 255, 0.2), 
+                 0 0 20px rgba(255, 255, 255, 0.2), 
+                 0 0 40px rgba(255, 255, 255, 0.2), 
+                 0 0 60px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 
+                 0 0 10px rgba(255, 255, 255, 0.4), 
+                 0 0 20px rgba(255, 255, 255, 0.6), 
+                 0 0 40px rgba(255, 255, 255, 0.8), 
+                 0 0 60px rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes streaky-move {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
