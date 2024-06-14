@@ -25,14 +25,6 @@ function Portfilio() {
           <Title />
       </ParallaxLayer>
       <ParallaxLayer offset={1} speed={0.27} className='bg-[#011825] px-52 mt-96'>
-          <Card 
-            right={false}
-            image={'/Portfolio/Vtube-homepage.png'}
-            title={'VTube - A YouTube clone'}
-            description={"Where coding brilliance meets video streaming, this YouTube clone offers a sleek, responsive design and seamless functionality, bringing Vedant Gupta's vision of modern media to life."}
-          />
-      </ParallaxLayer>
-      <ParallaxLayer offset={1} speed={0.27} className='bg-[#011825] px-52 mt-[58rem]'>
         <Card
           right={true}
           image={'/Portfolio/Portfolio1.png'}
@@ -40,7 +32,15 @@ function Portfilio() {
           description={'Dive into my portfolio website, where the parallax effect brings depth to my digital showcase and a stunning 3D model stands as a testament to my innovative spirit. Explore a blend of artistry and technology, where each scroll reveals layers of my creative journey.'}
         />
       </ParallaxLayer>
-      <ParallaxLayer offset={1} speed={0.27} className='bg-[#011825] px-52 mt-[92rem]'>
+      <ParallaxLayer offset={1} speed={0.27} className='bg-[#011825] px-52 mt-[58rem]'>
+          <Card 
+            right={false}
+            image={'/Portfolio/Vtube-homepage.png'}
+            title={'VTube - A YouTube clone'}
+            description={"Where coding brilliance meets video streaming, this YouTube clone offers a sleek, responsive design and seamless functionality, bringing Vedant Gupta's vision of modern media to life."}
+          />
+      </ParallaxLayer>
+      <ParallaxLayer offset={1} speed={0.27} className='bg-[#011825] px-52 mt-[100rem]'>
           <motion.div
             ref={ref}
             animate={controls}
@@ -48,9 +48,6 @@ function Portfilio() {
             variants={fadeIn("up", "spring", 0.5, 0.75)}
           >
             <div className='flex justify-between w-full h-full gap-20 mb-16'>
-              <div>
-                <img src="/Portfolio/Virbnb-homepage.png" className='object-fill w-[250rem] rounded-3xl'/>
-              </div>
               <motion.div
                 ref={ref}
                 animate={controls}
@@ -66,10 +63,13 @@ function Portfilio() {
                   </h2>
                 </div>
               </motion.div>
+              <div>
+                <img src="/Portfolio/Virbnb-homepage.png" className='object-fill w-[250rem] rounded-3xl'/>
+              </div>
             </div>
           </motion.div>
       </ParallaxLayer>
-      <ParallaxLayer offset={1} speed={0.27} className='bg-[#011825] px-52 mt-[125rem]'>
+      <ParallaxLayer offset={1} speed={0.27} className='bg-[#011825] px-52 mt-[135rem]'>
           <motion.div
             ref={ref}
             animate={controls}
@@ -77,6 +77,9 @@ function Portfilio() {
             variants={fadeIn("up", "spring", 0.5, 0.75)}
           >
             <div className='flex justify-between w-full h-full gap-20 mb-16'>
+              <div>
+                <img src="/Portfolio/Portfolio2.png" className='object-fill w-[300rem] rounded-3xl'/>
+              </div>
               <motion.div
                 ref={ref}
                 animate={controls}
@@ -92,9 +95,6 @@ function Portfilio() {
                   </h2>
                 </div>
               </motion.div>
-              <div>
-                <img src="/Portfolio/Vtube-homepage.png" className='object-fill w-[300rem] rounded-3xl'/>
-              </div>
             </div>
           </motion.div>
       </ParallaxLayer>

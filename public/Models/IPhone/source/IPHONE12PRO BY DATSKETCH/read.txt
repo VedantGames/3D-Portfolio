@@ -1,0 +1,14 @@
+Thanks for download this model
+
+If you find some edges error, turn on the "Auto Smooth" option (Look the instruction below) or apply the "Edge Split" Modifier if you use Blender
+
+To turn on, go to:
+1. Object Data Properties (Right Tabs)
+2. Go to Normals and check the "Auto Smooth" option
+
+If the texture is missing(Pink Color), then you need to locate it manually
+
+Contact me on email if you have any other issues 
+- datsketch1@gmail.com -
+
+Thank You!

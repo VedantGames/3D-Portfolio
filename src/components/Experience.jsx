@@ -20,7 +20,7 @@ function Experience() {
   }, [controls, inView]);
   return (
     <div>
-      <ParallaxLayer offset={3} speed={0.27} className='bg-[#011825] mt-80'>
+      <ParallaxLayer offset={3} speed={0.27} className='bg-[#011825] mt-96'>
         <motion.div
             ref={ref}
             animate={controls}
@@ -32,7 +32,7 @@ function Experience() {
           </h1>
         </motion.div>
       </ParallaxLayer>
-      <ParallaxLayer offset={3} speed={0.27} className='bg-[#011825] mt-[35rem]'>
+      <ParallaxLayer offset={3} speed={0.27} className='bg-[#011825] mt-[38rem]'>
         <div className='px-80 pt-10 flex'>
           <div className='flex flex-col gap-14'>
             {experiences.length > 0 && experiences.map((experience, i) => (
