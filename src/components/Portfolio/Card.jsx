@@ -77,10 +77,10 @@ function LeftCard({ image, title, description, ref1, controls }) {
           {/* <img src={image} className='object-fill w-[300rem] rounded-3xl'/> */}
           <Canvas camera={{fov: 60, position: [0, 0, 10]}} style={{height: "50rem", width: "50rem", marginTop: '-5rem'}} onMouseMove={handelMouseMove} onMouseLeave={handelMoudeLeave}>
             <ambientLight intensity={0} />
-            {/* <spotLight position={[0, 5, 0]} intensity={0}/> */}
+            {/* <spotLight position={[0, 5, 0]} intensity={0}/>ds */}
             <pointLight position={[2, 5, 0]} intensity={30}/>
             <IPhone position={[0, 1.5, -2]} rotation={[1.57+xRotation.get(), 0, 0+yRotation.get()]} scale={8} />
-          </Canvas>
+          </Canvas> 
         </div>
         <motion.div
           ref={ref1}
