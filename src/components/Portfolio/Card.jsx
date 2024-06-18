@@ -27,6 +27,27 @@ function LeftCard({ image, title, description, ref1, controls }) {
     [0.5, -0.5]
   );
   
+  const [screen, setScreen] = useState('');
+
+  const handleResize = () => {
+    const width = window.innerWidth;
+
+    if (width > 1536) setScreen('2xl')
+    else if (width > 1280) setScreen('xl')
+    else if (width > 1024) setScreen('lg')
+    else if (width > 768) setScreen('md')
+    else if (width > 540) setScreen('sm')
+
+    console.log(screen);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
   const handelMouseMove = (e) => {
     const rect = e.target.getBoundingClientRect();
 
@@ -67,15 +88,16 @@ function LeftCard({ image, title, description, ref1, controls }) {
       initial='hidden'
       variants={fadeIn("up", "spring", 0.5, 0.75)}
     >
-      <div className='flex justify-between w-full h-full gap-20 mb-16'>
+      <div className='grid grid-cols-2 w-full h-full gap-20 mb-16'>
         <div
           id='card'
           style={{
             transformStyle: "preserve-3d",
           }}
+          className='w-full 2xl:-ml-0 -ml-32'
         >
           {/* <img src={image} className='object-fill w-[300rem] rounded-3xl'/> */}
-          <Canvas camera={{fov: 60, position: [0, 0, 10]}} style={{height: "50rem", width: "50rem", marginTop: '-5rem'}} onMouseMove={handelMouseMove} onMouseLeave={handelMoudeLeave}>
+          <Canvas camera={{fov: 60, position: [0, 0, 10]}} style={{height: "50rem", width: (screen == '2xl' ? "50rem" : "40rem"), marginTop: '-5rem'}} onMouseMove={handelMouseMove} onMouseLeave={handelMoudeLeave}>
             <ambientLight intensity={0} />
             {/* <spotLight position={[0, 5, 0]} intensity={0}/>ds */}
             <pointLight position={[2, 5, 0]} intensity={30}/>
@@ -120,6 +142,27 @@ function RightCard({ image, title, description, ref1, controls }) {
     [-0.5, 0.5],
     [-0.5, 0.5]
   );
+
+  const [screen, setScreen] = useState('');
+
+  const handleResize = () => {
+    const width = window.innerWidth;
+
+    if (width > 1536) setScreen('2xl')
+    else if (width > 1280) setScreen('xl')
+    else if (width > 1024) setScreen('lg')
+    else if (width > 768) setScreen('md')
+    else if (width > 540) setScreen('sm')
+
+    console.log(screen);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   
   const handelMouseMove = (e) => {
     const rect = e.target.getBoundingClientRect();
@@ -161,7 +204,7 @@ function RightCard({ image, title, description, ref1, controls }) {
       initial='hidden'
       variants={fadeIn("up", "spring", 0.5, 0.75)}
     >
-      <div className='flex justify-between w-full h-full gap-20 mb-16'>
+      <div className='flex justify-between w-full h-full 2xl:gap-20 mb-16'>
         <motion.div
           ref={ref1}
           animate={controls}
@@ -179,11 +222,11 @@ function RightCard({ image, title, description, ref1, controls }) {
         </motion.div>
         <div id='card' style={{ transformStyle: "preserve-3d" }}>
           {/* <img src={image} className='object-fill w-[300rem] rounded-3xl'/> */}
-          <Canvas camera={{fov: 60, position: [0, 0, 10]}} style={{height: "50rem", width: "50rem", marginTop: '-5rem'}} onMouseMove={handelMouseMove} onMouseLeave={handelMoudeLeave}>
+          <Canvas camera={{fov: 60, position: [0, 0, 10]}} style={{height: "50rem", width: (screen == '2xl' ? "50rem" : "25rem"), marginTop: '-5rem'}} onMouseMove={handelMouseMove} onMouseLeave={handelMoudeLeave}>
             <ambientLight intensity={0} />
             {/* <spotLight position={[0, 5, 0]} intensity={0}/> */}
             <pointLight position={[2, 5, 0]} intensity={30}/>
-            <Portfolio position={[0, 0, -2]} rotation={[0.1+xRotation.get(), 1.57+yRotation.get(), 0.12]} scale={20} />
+            <Portfolio position={[0, 0, -2]} rotation={[0.1+xRotation.get(), 1.57+yRotation.get(), 0.12]} scale={(screen == '2xl' ? 20 : 15)} />
           </Canvas>
         </div>
       </div>

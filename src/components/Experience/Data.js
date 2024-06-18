@@ -10,23 +10,23 @@ export const experiences = [
     ]
   },
   {
+    title: "VFX Artist",
+    description: "3D Graphics",
+    date: "2019-2021",
+    details: [
+      "As a VFX artist, I conjure magic in every frame, transforming ordinary visuals into extraordinary spectacles that <span style='color: white;'>captivate and mesmerize.</span>",
+      "My artistry <span style='color: white;'>blends creativity and technical prowess</span>, crafting seamless and immersive experiences that push the boundaries of visual storytelling.",
+      "In my relentless pursuit of perfection, I breathe <span style='color: white;'>life into visuals</span>, making the impossible possible and the unreal unforgettable."
+    ]
+  },
+  {
     title: "Game Developer",
     description: "Indie",
-    date: "2019-2022",
+    date: "2018-2023",
     details: [
       "In the realm of game development, <span style='color: white;'>I conjure immersive worlds</span> and dynamic gameplay, blending storytelling with technical prowess.",
       "Every line of code I write breathes life into digital adventures, <span style='color: white;'>transforming ideas into interactive experiences</span> that captivate players.",
       "As a game developer, I am an architect of dreams, building virtual realms where <span style='color: white;'>imagination and reality merge seamlessly</span>."
-    ]
-  },
-  {
-    title: "Passionate Developer",
-    description: "Gaining Skills",
-    date: "Past-2019",
-    details: [
-      "As a passionate developer, <span style='color: white;'>I live and breathe code</span>, constantly pushing the boundaries of what’s possible in the digital world.",
-      "My journey is fueled by curiosity and innovation, transforming complex challenges into elegant, <span style='color: white;'>user-centric solutions.</span>",
-      "Every project I undertake is a <span style='color: white;'>labor of love</span>, where my dedication to crafting exceptional digital experiences shines through."
     ]
   },
   {

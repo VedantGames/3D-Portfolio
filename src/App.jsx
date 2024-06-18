@@ -20,11 +20,11 @@ function App() {
     <div className='bg-[#011825]'>
       <Navbar />
       <div>
-        <Parallax pages={5} className='-z-10 text-white relative block bg-[#011825]'>
+        <Parallax pages={6} className='-z-10 text-white relative block bg-[#011825]'>
           <Hero />
           <Portfilio />
-          <Experience />
           <Contact />
+          <Experience />
         </Parallax>
       </div>
     </div>
