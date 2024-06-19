@@ -7,6 +7,7 @@ import Macbook from './Macbook';
 import { Canvas } from '@react-three/fiber';
 import IPhone from './IPhone/IPhone'
 import Portfolio from './Mac/Portfolio1'
+import { Link } from 'react-router-dom';
 
 function LeftCard({ image, title, description, ref1, controls }) {
   const x = useMotionValue(0);
@@ -89,7 +90,9 @@ function LeftCard({ image, title, description, ref1, controls }) {
       variants={fadeIn("up", "spring", 0.5, 0.75)}
     >
       <div className='grid grid-cols-2 w-full h-full gap-20 mb-16'>
-        <div
+        <Link 
+          to={'https://vtube-vedant.vercel.app'}
+          target='_blank'
           id='card'
           style={{
             transformStyle: "preserve-3d",
@@ -103,7 +106,7 @@ function LeftCard({ image, title, description, ref1, controls }) {
             <pointLight position={[2, 5, 0]} intensity={30}/>
             <IPhone position={[0, 1.5, -2]} rotation={[1.57+xRotation.get(), 0, 0+yRotation.get()]} scale={8} />
           </Canvas> 
-        </div>
+        </Link>
         <motion.div
           ref={ref1}
           animate={controls}
@@ -220,15 +223,15 @@ function RightCard({ image, title, description, ref1, controls }) {
             </h2>
           </div>
         </motion.div>
-        <div id='card' style={{ transformStyle: "preserve-3d" }}>
+        <Link to={'https://babylang.vercel.app'} target='_blank' id='card' style={{ transformStyle: "preserve-3d" }}>
           {/* <img src={image} className='object-fill w-[300rem] rounded-3xl'/> */}
-          <Canvas camera={{fov: 60, position: [0, 0, 10]}} style={{height: "50rem", width: (screen == '2xl' ? "50rem" : "25rem"), marginTop: '-5rem'}} onMouseMove={handelMouseMove} onMouseLeave={handelMoudeLeave}>
+          <Canvas camera={{fov: 60, position: [0, 0, 10]}} style={{height: "50rem", width: (screen == '2xl' ? "50rem" : "25rem"), marginTop: '-10rem'}} onMouseMove={handelMouseMove} onMouseLeave={handelMoudeLeave}>
             <ambientLight intensity={0} />
             {/* <spotLight position={[0, 5, 0]} intensity={0}/> */}
             <pointLight position={[2, 5, 0]} intensity={30}/>
             <Portfolio position={[0, 0, -2]} rotation={[0.1+xRotation.get(), 1.57+yRotation.get(), 0.12]} scale={(screen == '2xl' ? 20 : 15)} />
           </Canvas>
-        </div>
+        </Link>
       </div>
     </motion.div>
   )

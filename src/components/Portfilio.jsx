@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import Title from './Portfolio/Title';
 import { fadeIn } from '../utils/motion';
 import Card from './Portfolio/Card';
+import { Link } from 'react-router-dom';
 
 function Portfilio() {
   const [screen, setScreen] = useState('');
@@ -48,8 +49,8 @@ function Portfilio() {
         <Card
           right={true}
           image={'/Portfolio/Portfolio1.png'}
-          title={'3D Portfolio'}
-          description={'Dive into my portfolio website, where the parallax effect brings depth to my digital showcase and a stunning 3D model stands as a testament to my innovative spirit. Explore a blend of artistry and technology, where each scroll reveals layers of my creative journey.'}
+          title={'BabyLang'}
+          description={"Babylang is a whimsical toy programming language crafted from JavaScript. This enchanting creation transforms the art of coding into a delightful game, inviting you to explore its playful syntax and imaginative constructs. Babylang is where creativity meets code, turning programming into an adventure filled with curiosity and joy."}
         />
       </ParallaxLayer>
       <ParallaxLayer offset={1} speed={0.27} className='bg-[#011825] xl:px-52 px-32 mt-[58rem]'>
@@ -67,7 +68,7 @@ function Portfilio() {
             initial='hidden'
             variants={fadeIn("up", "spring", 0.5, 0.75)}
           >
-            <div className='flex justify-between w-full h-full xl:gap-20 gap-10 mb-16'>
+            <Link to={'https://virbnb.vercel.app'} target='_blank' className='flex justify-between w-full h-full xl:gap-20 gap-10 mb-16'>
               <motion.div
                 ref={ref}
                 animate={controls}
@@ -86,7 +87,7 @@ function Portfilio() {
               <div>
                 <img src="/Portfolio/Virbnb-homepage.png" className='object-fill w-[250rem] rounded-3xl'/>
               </div>
-            </div>
+            </Link>
           </motion.div>
       </ParallaxLayer>
       <ParallaxLayer offset={1} speed={0.27} className='bg-[#011825] xl:px-52 px-32 mt-[135rem]'>
@@ -96,7 +97,7 @@ function Portfilio() {
             initial='hidden'
             variants={fadeIn("up", "spring", 0.5, 0.75)}
           >
-            <div className='flex justify-between w-full h-full xl:gap-20 gap-10 mb-16'>
+            <Link to={'http://portfolio-vedant.vercel.app'} target='_blank' className='flex justify-between w-full h-full xl:gap-20 gap-10 mb-16'>
               <div>
                 <img src="/Portfolio/Portfolio2.png" className='object-fill w-[300rem] rounded-3xl'/>
               </div>
@@ -115,7 +116,7 @@ function Portfilio() {
                   </h2>
                 </div>
               </motion.div>
-            </div>
+            </Link>
           </motion.div>
       </ParallaxLayer>
     </div>
