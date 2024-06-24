@@ -14,7 +14,6 @@ function Experience() {
   const [selectedMenu, setSelectedMenu] = useState(0);
 
   useEffect(() => {
-    console.log('title in view ', inView);
     if (inView)
       controls.start("show");
   }, [controls, inView]);

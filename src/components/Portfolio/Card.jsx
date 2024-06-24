@@ -14,16 +14,16 @@ function LeftCard({ image, title, description, ref1, controls }) {
   const [tx, setTx] = useState(0);
   const y = useMotionValue(0);
   
-  const xSpring = useSpring(x);
-  const ySpring = useSpring(y);
+  // const xSpring = useSpring(x);
+  // const ySpring = useSpring(y);
   
   const xRotation = useTransform(
-    ySpring,
+    y,
     [-0.5, 0, 0.5],
     [-0.5, 0, 1]
   );
   const yRotation = useTransform(
-    xSpring,
+    x,
     [-0.5, 0.5],
     [0.5, -0.5]
   );
@@ -38,8 +38,6 @@ function LeftCard({ image, title, description, ref1, controls }) {
     else if (width > 1024) setScreen('lg')
     else if (width > 768) setScreen('md')
     else if (width > 540) setScreen('sm')
-
-    console.log(screen);
   };
 
   useEffect(() => {
@@ -63,9 +61,7 @@ function LeftCard({ image, title, description, ref1, controls }) {
     
     x.set(xPct);
     y.set(yPct);
-    // console.log(Number(xRotation.get().slice(0, xRotation.get().length-3)), typeof(Number(xRotation.get().slice(0, xRotation.get().length-3))+10))
-    // console.log(x.get(), y.get(), xSpring.get(), ySpring.get(), xRotation.get(), yRotation.get())
-    // console.log(xRotation)
+    console.log(x.get(), xSpring.get());
   };
 
   const handelMoudeLeave = () => {
@@ -132,16 +128,16 @@ function RightCard({ image, title, description, ref1, controls }) {
   const [tx, setTx] = useState(0);
   const y = useMotionValue(0);
   
-  const xSpring = useSpring(x);
-  const ySpring = useSpring(y);
+  // const xSpring = useSpring(x);
+  // const ySpring = useSpring(y);
   
   const xRotation = useTransform(
-    ySpring,
+    y,
     [-0.5, 0, 0.5],
     [-0.5, 0, 1]
   );
   const yRotation = useTransform(
-    xSpring,
+    x,
     [-0.5, 0.5],
     [-0.5, 0.5]
   );
@@ -157,7 +153,6 @@ function RightCard({ image, title, description, ref1, controls }) {
     else if (width > 768) setScreen('md')
     else if (width > 540) setScreen('sm')
 
-    console.log(screen);
   };
 
   useEffect(() => {

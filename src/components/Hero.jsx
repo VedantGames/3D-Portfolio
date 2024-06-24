@@ -2,6 +2,8 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { Canvas } from '@react-three/fiber'
 import React, { useEffect, useState } from 'react'
 import Mesh from './Mesh'
+import Web from './Hero/Web';
+import Position from './Hero/Position';
 
 function Hero() {
   const [screen, setScreen] = useState('');
@@ -15,7 +17,6 @@ function Hero() {
     else if (width > 768) setScreen('md')
     else if (width > 540) setScreen('sm')
 
-    console.log(screen);
   };
 
   useEffect(() => {
@@ -28,7 +29,7 @@ function Hero() {
   return (
     <div>
       <ParallaxLayer offset={0} speed={0}>
-        <img className='absolute' src='https://raw.githubusercontent.com/ForrestKnight/3d-portfolio/6c6efde636117645d1cd9e7a2a7cfb3ebccd9617/public/parallax/1Stars.svg' alt='' />
+        <img className='absolute~' src='https://raw.githubusercontent.com/ForrestKnight/3d-portfolio/6c6efde636117645d1cd9e7a2a7cfb3ebccd9617/public/parallax/1Stars.svg' alt='' />
       </ParallaxLayer>
       <ParallaxLayer offset={0} speed={0.25}>
         <img className='absolute' src="https://raw.githubusercontent.com/ForrestKnight/3d-portfolio/6c6efde636117645d1cd9e7a2a7cfb3ebccd9617/public/parallax/2Planets.svg" alt="" />
@@ -43,16 +44,22 @@ function Hero() {
         <img className='absolute xl:mt-0 lg:mt-20 mt-40' src="https://raw.githubusercontent.com/ForrestKnight/3d-portfolio/6c6efde636117645d1cd9e7a2a7cfb3ebccd9617/public/parallax/4Mountain.svg" alt="" />
       </ParallaxLayer>
 
+      <ParallaxLayer offset={0} speed={-1}>
+        <Web />
+      </ParallaxLayer>
       <ParallaxLayer offset={0} speed={0.5}>
         <div className='size-full flex 2xl:gap-[30rem] xl:gap-80 gap-32 justify-center items-center'>
           <div>
-            <div className='2xl:text-[180px] xl:text-9xl text-8xl 2xl:leading-[160px] xl:pl-0 pl-32 font-bold'>
+            <div className='2xl:text-[180px] xl:text-9xl text-8xl 2xl:leading-[160px] xl:pl-0 pl-32 -mt-20 font-bold'>
               <h1>
                 Vedant
               </h1>
               <h1>
                 Gupta
               </h1>
+            </div>
+            <div className='mt-8'>
+              <Position />
             </div>
           </div>
           <div className='lg:text-5xl text-4xl font-bold streaky-glow xl:max-w-96 xl:pl-0 lg:pl-32 '>
@@ -80,6 +87,8 @@ function Hero() {
           <Mesh rotation={[0.3, 2.4, 0]} position={[0, -1, 0]} scale={(screen == '2xl' ? 2.2 : (screen == 'xl' ? 2 : 1.8))} />
         </Canvas>
       </ParallaxLayer>
+
+      
     </div>
   )
 }

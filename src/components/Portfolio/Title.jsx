@@ -9,7 +9,6 @@ function Title() {
   const { ref, inView } = useInView();
 
   useEffect(() => {
-    console.log('title in view ', inView);
     if (inView)
       controls.start("show");
   }, [controls, inView]);

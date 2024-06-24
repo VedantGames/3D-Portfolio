@@ -20,8 +20,6 @@ function Portfilio() {
     else if (width > 1024) setScreen('lg')
     else if (width > 768) setScreen('md')
     else if (width > 540) setScreen('sm')
-
-    console.log(screen);
   };
 
   useEffect(() => {
