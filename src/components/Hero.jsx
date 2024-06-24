@@ -27,7 +27,7 @@ function Hero() {
   }, []);
 
   return (
-    <div>
+    <div className='cursor-none'>
       <ParallaxLayer offset={0} speed={0}>
         <img className='absolute~' src='https://raw.githubusercontent.com/ForrestKnight/3d-portfolio/6c6efde636117645d1cd9e7a2a7cfb3ebccd9617/public/parallax/1Stars.svg' alt='' />
       </ParallaxLayer>

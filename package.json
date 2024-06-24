@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.3.7",
     "@fontsource/montserrat": "^5.0.18",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@react-spring/parallax": "^9.7.3",
     "@react-spring/web": "^9.7.3",
     "@react-three/drei": "^9.106.0",
@@ -19,6 +23,7 @@
     "parallex": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
     "react-intersection-observer": "^9.10.3",
     "react-router-dom": "^6.23.1",
     "styled-components": "^6.1.11",

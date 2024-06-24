@@ -14,19 +14,21 @@ import Experience from './components/Experience'
 import Contact from './components/Contact'
 import useMousePosition from './hooks/useMousePosition'
 import { useSpring } from 'framer-motion'
+import Footer from './components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
   const mousePostion = useMousePosition();
 
   return (
-    <div className='bg-[#011825] cursor-none'>
+    <div className='bg-[#011825]'>
       <div>
         <Navbar />
         <div>
           <Parallax pages={6} className='-z-10 text-white relative block bg-[#011825]'>
             <Hero />
             <Portfilio />
+            <Footer />
             <Contact />
             <Experience />
             <div className='absolute z-50' style={{top: mousePostion.y, left: mousePostion.x}}>
