@@ -35,7 +35,7 @@ function Experience() {
         <div className='2xl:px-80 xl:px-40 lg:px-32 px-10 pt-10 xl:gap-32 lg:gap-10 gap-10 flex md:flex-row flex-col bg-[#011825]'>
           <div className='flex flex-col gap-14'>
             {experiences.length > 0 && experiences.map((experience, i) => (
-              <div key={i} className={'flex flex-col gap-2 w-96 cursor-pointer ' + (selectedMenu === i ? 'border-l-[1rem] border-[#0d3056] pl-5' : 'md:pl-16 pl-5')} onClick={() => setSelectedMenu(i)}>
+              <div key={i} className={'flex flex-col gap-2 w-96 cursor-pointer ' + (selectedMenu === i ? 'border-l-[1rem] border-[#0d3056] md:pl-12 pl-5' : 'md:pl-16 pl-5')} onClick={() => setSelectedMenu(i)}>
                 <h1 className={'2xl:text-4xl text-3xl font-bold ' + (selectedMenu === i ? 'text-[#1689c8]' : 'text-slate-600')}>{experience.title}</h1>
                 <h2 className={'text-xl ' + (selectedMenu !== i && 'text-slate-600')}>{experience.description} | {experience.date}</h2>
               </div>
