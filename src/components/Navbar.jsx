@@ -11,7 +11,7 @@ function Navbar() {
           VG
         </Link>
       </div>
-      <div className='flex flex-col gap-5 pr-10 w-48'>
+      <div className='md:flex hidden flex-col gap-5 pr-10 w-48'>
         <Link to={'/#Hero'} className={'hover:text-white font-bold text-2xl w-full ' + (selectedSection === 'Hero' ? 'text-white border-r-8 border-[#1689C8]' : 'text-slate-500')} onClick={() => setSelectedSection('Hero')}>
           Hero
         </Link>

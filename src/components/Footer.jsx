@@ -5,9 +5,9 @@ import { IoLogoGithub, IoLogoInstagram, IoLogoTwitter } from "react-icons/io5";
 function Footer() {
   return (
     <ParallaxLayer offset={5} speed={0.27} >
-      <div className='bg-[#011825] flex justify-end items-center flex-col size-full z-50'>
+      <div className='bg-[#011825] flex justify-end items-center flex-col size-full z-50 md:mt-[16rem] mt-[70rem]'>
         <div>
-          <h1 className='text-7xl font-bold mb-36'>For BEST Services.</h1>
+          <h1 className='md:text-7xl text-4xl font-bold mb-36'>For BEST Services.</h1>
         </div>
         <div className='flex justify-center items-center flex-col mb-20'>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-48">

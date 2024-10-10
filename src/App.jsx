@@ -25,7 +25,7 @@ function App() {
       <div>
         <Navbar />
         <div>
-          <Parallax pages={6} className='-z-10 text-white relative block bg-[#011825]'>
+          <Parallax pages={7} className='-z-10 text-white relative block bg-[#011825]'>
             <Hero />
             <Portfilio />
             <Footer />
@@ -42,6 +42,13 @@ function App() {
               </div>
               </div>
             </div>
+            <ParallaxLayer offset={6} speed={0.27} className='bg-[#011825] h-0 md:block hidden'>
+              <div className='flex justify-center items-end h-full w-full'>
+                <h1 className='text-9xl font-bold mb-20'>
+                  Thank You.
+                </h1>
+              </div>
+            </ParallaxLayer>
           </Parallax>
         </div>
       </div>

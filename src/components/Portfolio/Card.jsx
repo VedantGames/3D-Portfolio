@@ -61,7 +61,6 @@ function LeftCard({ image, title, description, ref1, controls }) {
     
     x.set(xPct);
     y.set(yPct);
-    console.log(x.get(), xSpring.get());
   };
 
   const handelMoudeLeave = () => {
@@ -85,7 +84,7 @@ function LeftCard({ image, title, description, ref1, controls }) {
       initial='hidden'
       variants={fadeIn("up", "spring", 0.5, 0.75)}
     >
-      <div className='grid grid-cols-2 w-full h-full gap-20 mb-16'>
+      <div className='sm:grid sm:grid-cols-2 flex flex-col w-full h-full sm:gap-20 mb-16 '>
         <Link 
           to={'https://vtube-vedant.vercel.app'}
           target='_blank'
@@ -96,7 +95,7 @@ function LeftCard({ image, title, description, ref1, controls }) {
           className='w-full 2xl:-ml-0 -ml-32'
         >
           {/* <img src={image} className='object-fill w-[300rem] rounded-3xl'/> */}
-          <Canvas camera={{fov: 60, position: [0, 0, 10]}} style={{height: "50rem", width: (screen == '2xl' ? "50rem" : "40rem"), marginTop: '-5rem'}} onMouseMove={handelMouseMove} onMouseLeave={handelMoudeLeave}>
+          <Canvas camera={{fov: 60, position: [0, 0, 10]}} style={{height: "50rem", width: (window.innerWidth > 1500 ? "40rem" : "30rem"), marginTop: '-5rem'}} onMouseMove={handelMouseMove} onMouseLeave={handelMoudeLeave}>
             <ambientLight intensity={0} />
             {/* <spotLight position={[0, 5, 0]} intensity={0}/>ds */}
             <pointLight position={[2, 5, 0]} intensity={30}/>
@@ -109,11 +108,11 @@ function LeftCard({ image, title, description, ref1, controls }) {
           initial='hidden'
           variants={fadeIn("right", "spring", 0.5, 0.75)}
         >
-          <div className='flex flex-col gap-5 justify-center'>
-            <h1 className='text-5xl font-bold'>
+          <div className='flex flex-col gap-5 justify-center sm:mt-0 -mt-52'>
+            <h1 className='sm:text-5xl text-3xl font-bold'>
               {title}
             </h1>
-            <h2 className='text-2xl'>
+            <h2 className='text-2xl sm:px-0 pl-3 sm:line-clamp-none line-clamp-[8]'>
             {description}
             </h2>
           </div>
@@ -202,29 +201,29 @@ function RightCard({ image, title, description, ref1, controls }) {
       initial='hidden'
       variants={fadeIn("up", "spring", 0.5, 0.75)}
     >
-      <div className='flex justify-between w-full h-full 2xl:gap-20 mb-16'>
+      <div className='flex justify-between w-full h-full 2xl:gap-20 mb-16 md:flex-row flex-col-reverse'>
         <motion.div
           ref={ref1}
           animate={controls}
           initial='hidden'
           variants={fadeIn("right", "spring", 0.5, 0.75)}
         >
-          <div className='flex flex-col gap-5 justify-center'>
-            <h1 className='text-5xl font-bold'>
+          <div className='flex flex-col gap-5 justify-center sm:mt-0 -mt-24'>
+            <h1 className='md:text-5xl text-4xl font-bold'>
               {title}
             </h1>
-            <h2 className='text-2xl'>
+            <h2 className='text-2xl sm:px-0 px-5'>
             {description}
             </h2>
           </div>
         </motion.div>
         <Link to={'https://babylang.vercel.app'} target='_blank' id='card' style={{ transformStyle: "preserve-3d" }}>
           {/* <img src={image} className='object-fill w-[300rem] rounded-3xl'/> */}
-          <Canvas camera={{fov: 60, position: [0, 0, 10]}} style={{height: "50rem", width: (screen == '2xl' ? "50rem" : "25rem"), marginTop: '-10rem'}} onMouseMove={handelMouseMove} onMouseLeave={handelMoudeLeave}>
+          <Canvas camera={{fov: 60, position: [0, 0, 10]}} className='md:-mt-40 -mt-28' style={{height: window.innerWidth > 750 ? "50rem" : '20rem', width: (window.outerWidth > 1500 ? "40rem" : (window.innerWidth > 750 ? "30rem" : '22rem'))}} onMouseMove={handelMouseMove} onMouseLeave={handelMoudeLeave}>
             <ambientLight intensity={0} />
             {/* <spotLight position={[0, 5, 0]} intensity={0}/> */}
             <pointLight position={[2, 5, 0]} intensity={30}/>
-            <Portfolio position={[0, 0, -2]} rotation={[0.1+xRotation.get(), 1.57+yRotation.get(), 0.12]} scale={(screen == '2xl' ? 20 : 15)} />
+            <Portfolio position={[0, 0, window.innerWidth > 750 ? -2 : 0]} rotation={[0.1+xRotation.get(), 1.57+yRotation.get(), 0.12]} scale={(window.innerWidth > 1500 ? 20 : 25)} />
           </Canvas>
         </Link>
       </div>
