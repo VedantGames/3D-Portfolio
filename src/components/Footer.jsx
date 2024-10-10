@@ -4,8 +4,8 @@ import { IoLogoGithub, IoLogoInstagram, IoLogoTwitter } from "react-icons/io5";
 
 function Footer() {
   return (
-    <ParallaxLayer offset={5} speed={0.27} >
-      <div className='bg-[#011825] flex justify-end items-center flex-col size-full z-50 md:mt-[16rem] mt-[70rem]'>
+    <ParallaxLayer offset={5} speed={0.27} className='bg-[#011825] h-full'>
+      <div className='bg-[#011825] flex justify-end items-center flex-col size-full z-50 md:mt-36 mt-[70rem]'>
         <div>
           <h1 className='md:text-7xl text-4xl font-bold mb-36'>For BEST Services.</h1>
         </div>
