@@ -21,7 +21,7 @@ function Title() {
       variants={fadeIn("down", "spring", 0.5, 0.75)}
     >
       <div>
-        <h1 className='md:text-8xl text-6xl md:px-36 font-bold mb-20'>
+        <h1 className='md:text-8xl text-6xl md:px-24 font-bold mb-20'>
           Projects
         </h1>
       </div>

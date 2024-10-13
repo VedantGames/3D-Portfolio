@@ -17,15 +17,14 @@ import { useSpring } from 'framer-motion'
 import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
   const mousePostion = useMousePosition();
 
   return (
     <div className='bg-[#011825]'>
       <div>
         <Navbar />
-        <div>
-          <Parallax pages={7} className='-z-10 text-white relative block bg-[#011825]'>
+        <div >
+          <Parallax pages={7} className='text-white relative block bg-[#011825]'>
             <Hero />
             <Portfilio />
             <Footer />

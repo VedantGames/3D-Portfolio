@@ -5,7 +5,7 @@ function Contact() {
   return (
     <div>
       <ParallaxLayer offset={4} speed={0.27} >
-        <div className='2xl:px-[40rem] xl:px-[30rem] md:px-32 px-16 py-32 md:mt-[33rem] mt-[87rem] bg-[#011825]'>
+        <div className='2xl:px-[40rem] xl:px-[30rem] md:px-32 px-14 py-32 md:mt-[33rem] mt-[87rem] bg-[#011825]'>
           <div className='mb-10'>
             <h1 className='text-6xl font-bold'>
               Contact
