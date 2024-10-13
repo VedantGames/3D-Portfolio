@@ -5,7 +5,7 @@ function Navbar() {
   const [selectedSection, setSelectedSection] = useState('Hero');
 
   return (
-    <div className='fixed w-full pt-12 flex justify-between'>
+    <div className='z-10 fixed w-full pt-12 flex justify-between'>
       <div className='pl-16'>
         <Link to={'/'} className='font-bold text-5xl text-white cursor-pointer'>
           VG
